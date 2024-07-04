@@ -1,24 +1,36 @@
 body {
-    background-color: snow;
+    background-color: #ebcbae;
     padding: 1rem;
 }
 
 #kysymys {
-    background-color: lightgreen;
-    border-radius: 15px;
-    text-align: center;
-    padding: 1rem;
-    margin: 1rem;
+  background-color: #d9b650;
+  border-radius: 15px;
+  text-align: center;
+  padding: 1rem;
+  margin: 0.5rem;
+  font-weight: bold;
 }
 
 .vaihtoehto {
-    background-color: lightblue;
-    border-radius: 15px;
-    text-align: center;
-    padding: 1rem;
-    margin: 1rem;
+  background-color: #fde994;
+  border-radius: 15px;
+  text-align: center;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #83580b;
 }
 
-.vaihtoehto:hover {
-    background-color: lightskyblue;
+.vaihtoehto:hover{
+  background-color: #f5dd7b;  
+}
+
+#nappi{
+    text-align: center;
+}
+#seuraava {
+  padding: 1rem;
+  margin: 1rem;
 }
