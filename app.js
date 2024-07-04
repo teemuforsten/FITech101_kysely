@@ -3851,20 +3851,20 @@
       return A._asyncStartSync($async$main, $async$completer);
     },
     asetaVastausvaihtoehdot(vaihtoehdot) {
-      var t1, t2, i,
+      var t1, i,
         vastauksetElement = document.querySelector("#vastaukset");
       if (vastauksetElement != null) {
         J.get$children$x(vastauksetElement).clear$0(0);
         if (vaihtoehdot != null)
-          for (t1 = J.getInterceptor$asx(vaihtoehdot), t2 = type$.Map_String_dynamic, i = 0; i < A._asNum(t1.get$length(vaihtoehdot)); ++i)
-            A.lisaaVastausvaihtoehto(t2._as(t1.$index(vaihtoehdot, i)), vastauksetElement);
+          for (t1 = J.getInterceptor$asx(vaihtoehdot), i = 0; i < A._asNum(t1.get$length(vaihtoehdot)); ++i)
+            A.lisaaVastausvaihtoehto(t1.$index(vaihtoehdot, i), vastauksetElement);
       }
     },
     lisaaVastausvaihtoehto(vaihtoehto, vastauksetElement) {
       var t1,
         elementti = document.createElement("div");
       elementti.className = "vaihtoehto";
-      B.DivElement_methods.set$text(elementti, A._asStringQ(vaihtoehto.$index(0, "teksti")));
+      B.DivElement_methods.set$text(elementti, A._asStringQ(J.$index$asx(vaihtoehto, "teksti")));
       t1 = type$._ElementEventStreamImpl_MouseEvent;
       A._EventStreamSubscription$(elementti, "click", t1._eval$1("~(1)?")._as(new A.lisaaVastausvaihtoehto_closure(vaihtoehto, elementti)), false, t1._precomputed1);
       J.get$children$x(vastauksetElement).add$1(0, elementti);
@@ -5730,7 +5730,7 @@
       var t1;
       type$.MouseEvent._as(e);
       t1 = this.elementti;
-      if (A._asBool(this.vaihtoehto.$index(0, "oikein")))
+      if (A._asBool(J.$index$asx(this.vaihtoehto, "oikein")))
         B.DivElement_methods.set$text(t1, "oikein!");
       else
         B.DivElement_methods.set$text(t1, "v\xe4\xe4rin!");
