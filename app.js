@@ -3850,14 +3850,24 @@
       });
       return A._asyncStartSync($async$main, $async$completer);
     },
+    asetaKysymysteksti(teksti) {
+      var t1 = document.querySelector("#kysymys");
+      if (t1 != null)
+        J.set$text$x(t1, teksti == null ? "" : teksti);
+    },
     asetaVastausvaihtoehdot(vaihtoehdot) {
-      var t1, i,
-        vastauksetElement = document.querySelector("#vastaukset");
+      var t2, i, t3,
+        t1 = document,
+        vastauksetElement = t1.querySelector("#vastaukset");
       if (vastauksetElement != null) {
         J.get$children$x(vastauksetElement).clear$0(0);
         if (vaihtoehdot != null)
-          for (t1 = J.getInterceptor$asx(vaihtoehdot), i = 0; i < A._asNum(t1.get$length(vaihtoehdot)); ++i)
-            A.lisaaVastausvaihtoehto(t1.$index(vaihtoehdot, i), vastauksetElement);
+          for (t2 = J.getInterceptor$asx(vaihtoehdot), i = 0; i < A._asNum(t2.get$length(vaihtoehdot)); ++i) {
+            t3 = t1.querySelector("#kysymys");
+            if (t3 != null)
+              J.set$text$x(t3, "test");
+            A.lisaaVastausvaihtoehto(t2.$index(vaihtoehdot, i), vastauksetElement);
+          }
       }
     },
     lisaaVastausvaihtoehto(vaihtoehto, vastauksetElement) {
@@ -5709,17 +5719,14 @@
   };
   A.main_closure.prototype = {
     call$1(e) {
-      var t1, t2, t3;
+      var t1, t2;
       type$.MouseEvent._as(e);
       t1 = this.kysymykset;
       t2 = J.getInterceptor$ax(t1);
       t2.shuffle$0(t1);
       if (t2.get$isNotEmpty(t1)) {
         t1 = type$.Map_String_dynamic._as(t2.$index(t1, 0));
-        t2 = A._asStringQ(t1.$index(0, "teksti"));
-        t3 = document.querySelector("#kysymys");
-        if (t3 != null)
-          J.set$text$x(t3, t2 == null ? "" : t2);
+        A.asetaKysymysteksti(A._asStringQ(t1.$index(0, "teksti")));
         A.asetaVastausvaihtoehdot(t1.$index(0, "vaihtoehdot"));
       }
     },
