@@ -3851,13 +3851,13 @@
       return A._asyncStartSync($async$main, $async$completer);
     },
     asetaVastausvaihtoehdot(vaihtoehdot) {
-      var t1,
+      var t1, i,
         vastauksetElement = document.querySelector("#vastaukset");
       if (vastauksetElement != null) {
         J.get$children$x(vastauksetElement).clear$0(0);
         if (vaihtoehdot != null)
-          for (t1 = J.get$iterator$ax(vaihtoehdot); t1.moveNext$0();)
-            A.lisaaVastausvaihtoehto(t1.get$current(), vastauksetElement);
+          for (t1 = J.getInterceptor$asx(vaihtoehdot), i = 0; i < t1.get$length(vaihtoehdot); ++i)
+            A.lisaaVastausvaihtoehto(t1.$index(vaihtoehdot, i), vastauksetElement);
       }
     },
     lisaaVastausvaihtoehto(vaihtoehto, vastauksetElement) {
