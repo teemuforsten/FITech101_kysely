@@ -31,5 +31,22 @@
                 "oikein": true
             }]
         }
+        ,
+        {
+            "teksti": "kysymys 3",
+            "vaihtoehdot": [{
+                "teksti": "kysymys 3 - vastaus 1",
+                "oikein": false
+            }, {
+                "teksti": "kysymys 3 - vastaus 2",
+                "oikein": false
+            }, {
+                "teksti": "kysymys 3 - vastaus 3",
+                "oikein": true
+            }, {
+                "teksti": "kysymys 3 - vastaus 4",
+                "oikein": false
+            }]
+        }
     ]
 }
