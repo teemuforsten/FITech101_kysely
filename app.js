@@ -3851,13 +3851,13 @@
       return A._asyncStartSync($async$main, $async$completer);
     },
     asetaVastausvaihtoehdot(vaihtoehdot) {
-      var t1, i,
+      var t1, t2, i,
         vastauksetElement = document.querySelector("#vastaukset");
       if (vastauksetElement != null) {
         J.get$children$x(vastauksetElement).clear$0(0);
         if (vaihtoehdot != null)
-          for (t1 = J.getInterceptor$asx(vaihtoehdot), i = 0; i < t1.get$length(vaihtoehdot); ++i)
-            A.lisaaVastausvaihtoehto(t1.$index(vaihtoehdot, i), vastauksetElement);
+          for (t1 = J.getInterceptor$asx(vaihtoehdot), t2 = type$.Map_String_dynamic, i = 0; i < A._asNum(t1.get$length(vaihtoehdot)); ++i)
+            A.lisaaVastausvaihtoehto(t2._as(t1.$index(vaihtoehdot, i)), vastauksetElement);
       }
     },
     lisaaVastausvaihtoehto(vaihtoehto, vastauksetElement) {
@@ -4120,7 +4120,7 @@
     },
     $index(receiver, index) {
       A._asInt(index);
-      if (!(index.$ge(0, 0) && index.$lt(0, receiver.length)))
+      if (index >= receiver.length)
         throw A.wrapException(A.diagnoseIndexError(receiver, index));
       return receiver[index];
     },
@@ -5720,7 +5720,7 @@
         t3 = document.querySelector("#kysymys");
         if (t3 != null)
           J.set$text$x(t3, t2 == null ? "" : t2);
-        A.asetaVastausvaihtoehdot(type$.nullable_List_Map_String_dynamic._as(t1.$index(0, "vaihtoehdot")));
+        A.asetaVastausvaihtoehdot(t1.$index(0, "vaihtoehdot"));
       }
     },
     $signature: 4
@@ -5859,7 +5859,6 @@
       legacy_Never: findType("0&*"),
       legacy_Object: findType("Object*"),
       nullable_Future_Null: findType("Future<Null>?"),
-      nullable_List_Map_String_dynamic: findType("List<Map<String,@>>?"),
       nullable_List_dynamic: findType("List<@>?"),
       nullable_Object: findType("Object?"),
       nullable__FutureListener_dynamic_dynamic: findType("_FutureListener<@,@>?"),
